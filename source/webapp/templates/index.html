@@ -11,21 +11,19 @@
 
 </head>
 <body>
-
+<div class="m-5">
 <form action="/" method="POST">
     {% csrf_token %}
 
-    <div class="m-5">
+
         <div class="input-group mb-3 w-50">
               <span class="input-group-text" id="first_number">First number</span>
-              <input type="number" class="form-control" placeholder=""
-                     aria-label="" aria-describedby="first_number">
+              <input type="number" class="form-control" name="first_number">
         </div>
 
         <div class="input-group mb-3 w-50">
               <span class="input-group-text" id="second_number">Second number</span>
-              <input type="number" class="form-control" placeholder=""
-                     aria-label="" aria-describedby="second_number">
+              <input type="number" class="form-control" name="second_number">
         </div>
 
         <div class="form-check">
@@ -56,10 +54,15 @@
               </label>
         </div>
         <input class="btn btn-outline-secondary" type="submit" value="Calculate">
-    </div>
 
 
 </form>
+    <br>
+    <h3 class="mb-5">{{ result }}</h3>
+
+</div>
+
+
 
 
 
